@@ -36,7 +36,7 @@ export default function Home() {
           <Item>
             <img
               src="computer.jpg"
-              alt="Old Computer Image"
+              alt="Old Computer"
               style={{
                 width: "100%",
                 maxWidth: "620px",
