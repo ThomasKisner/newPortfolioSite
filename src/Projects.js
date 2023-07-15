@@ -23,8 +23,8 @@ const projects = [
     stack: "React.js v18, Material UI v5, @emotion/styled v11, React Router v6",
     description:
       "Single page portfolio site displaying information about myself, some of my projects, and options to contact me.",
-    img: "portfolioSiteDark.png",
-    imgLight: "portfolioSiteLight.png",
+    img: "portfolioSiteDark.webp",
+    imgLight: "portfolioSiteLight.webp",
     imgAlt: "Portfolio site image",
   },
   {
@@ -33,8 +33,8 @@ const projects = [
     stack: "Node.js, Express v4, SQLite3 v4",
     description:
       " A backend created to interface with an existing note taking application backend enabling display, editing, and deletion of notes.",
-    img: "notesCode.png",
-    imgLight: "notesCodeLight.png",
+    img: "notesCode.webp",
+    imgLight: "notesCodeLight.webp",
     imgAlt: "Back-end project code",
   },
 ];
