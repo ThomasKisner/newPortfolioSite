@@ -143,26 +143,29 @@ function ResponsiveAppBar() {
             }}
             role="menu"
           >
-            {console.log(theme.palette)}
             {pages.map((page) => (
-              <Link
-                to={page.path}
+              <MenuItem
                 key={page.path}
-                onClick={() => setActiveTab(page.path)}
-                aria-label={page.ariaLabel}
+                onClick={handleCloseNavMenu}
+                selected={activeTab === page.path}
                 role="menuitem"
               >
-                <MenuItem
+                <Link
+                  to={page.path}
                   key={page.path}
-                  onClick={handleCloseNavMenu}
-                  selected={activeTab === page.path}
-                  sx={{
-                    color: theme.palette.common.white,
-                  }}
+                  onClick={() => setActiveTab(page.path)}
+                  aria-label={page.ariaLabel}
                 >
-                  <Typography textAlign="center">{page.title}</Typography>
-                </MenuItem>
-              </Link>
+                  <Typography
+                    textAlign="center"
+                    sx={{
+                      color: theme.palette.common.white,
+                    }}
+                  >
+                    {page.title}
+                  </Typography>
+                </Link>
+              </MenuItem>
             ))}
           </Box>
           <ToggleColorMode />
