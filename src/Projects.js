@@ -24,6 +24,7 @@ const projects = [
     description:
       "Single page portfolio site displaying information about myself, some of my projects, and options to contact me.",
     img: "portfolioSiteDark.webp",
+    imgAspectRatio: "auto 566 / 300",
     imgLight: "portfolioSiteLight.webp",
     imgAlt: "Portfolio site image",
   },
@@ -33,6 +34,7 @@ const projects = [
     stack: "Node.js, Express v4, SQLite3 v4",
     description:
       " A backend created to interface with an existing note taking application backend enabling display, editing, and deletion of notes.",
+    imgAspectRatio: "auto 566 / 300",
     img: "notesCode.webp",
     imgLight: "notesCodeLight.webp",
     imgAlt: "Back-end project code",
@@ -69,7 +71,8 @@ export default function Projects() {
                     src={project[imgKey]}
                     alt={project.imgAlt}
                     style={{
-                      height: "300px",
+                      aspectRatio: project.imgAspectRatio,
+                      height: "auto",
                       width: "100%",
                       objectFit: "cover",
                       objectPosition: "left top",

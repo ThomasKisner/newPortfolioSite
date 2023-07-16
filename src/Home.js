@@ -35,7 +35,7 @@ export default function Home() {
         <Grid item xs={12} md={5}>
           <Item>
             <img
-              src="computer.jpg"
+              src="computer.webp"
               alt="Old Computer"
               style={{
                 width: "100%",
