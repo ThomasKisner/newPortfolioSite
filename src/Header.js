@@ -91,6 +91,7 @@ function ResponsiveAppBar() {
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
+              role="menu"
             >
               {pages.map((page) => (
                 <Link
