@@ -107,6 +107,7 @@ function ResponsiveAppBar() {
                     sx={{
                       color: theme.palette.text.primary,
                     }}
+                    role="menuitem"
                   >
                     <Typography textAlign="center">{page.title}</Typography>
                   </MenuItem>
