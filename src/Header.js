@@ -15,10 +15,14 @@ import { useTheme } from "@mui/material/styles";
 
 import { Link } from "react-router-dom";
 const pages = [
-  { title: "Home", path: "/" },
-  { title: "About", path: "about" },
-  { title: "Projects", path: "projects" },
-  { title: "Contact", path: "contact" },
+  { title: "Home", path: "/", ariaLabel: "Home navigation button" },
+  { title: "About", path: "about", ariaLabel: "About navigation button" },
+  {
+    title: "Projects",
+    path: "projects",
+    ariaLabel: "Projects navigation button",
+  },
+  { title: "Contact", path: "contact", ariaLabel: "Contact navigation button" },
 ];
 
 function getActiveTab() {
@@ -93,6 +97,7 @@ function ResponsiveAppBar() {
                   to={page.path}
                   key={page.path}
                   onClick={() => setActiveTab(page.path)}
+                  aria-label={page.ariaLabel}
                 >
                   <MenuItem
                     key={page.path}
@@ -142,6 +147,7 @@ function ResponsiveAppBar() {
                 to={page.path}
                 key={page.path}
                 onClick={() => setActiveTab(page.path)}
+                aria-label={page.ariaLabel}
               >
                 <MenuItem
                   key={page.path}
