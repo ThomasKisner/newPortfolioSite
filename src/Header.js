@@ -100,14 +100,14 @@ function ResponsiveAppBar() {
                   sx={{
                     color: theme.palette.text.primary,
                   }}
+                  role="menuitem"
                   component={Link}
-                  href={page.path}
+                  to={page.path}
                   onClick={() => {
                     handleCloseNavMenu();
                     setActiveTab(page.path);
                   }}
                   aria-label={page.ariaLabel}
-                  role="menuitem"
                 >
                   <Typography textAlign="center">{page.title}</Typography>
                 </MenuItem>
@@ -141,22 +141,28 @@ function ResponsiveAppBar() {
               display: { xs: "none", md: "flex" },
               backgroundColor: theme.palette.primary,
             }}
+            role="menu"
           >
+            {console.log(theme.palette)}
             {pages.map((page) => (
-              <MenuItem
-                href={page.path}
+              <Link
+                to={page.path}
                 key={page.path}
-                onClick={() => {
-                  handleCloseNavMenu();
-                  setActiveTab(page.path);
-                }}
-                selected={activeTab === page.path}
-                sx={{
-                  color: theme.palette.common.white,
-                }}
+                onClick={() => setActiveTab(page.path)}
+                aria-label={page.ariaLabel}
+                role="menuitem"
               >
-                <Typography textAlign="center">{page.title}</Typography>
-              </MenuItem>
+                <MenuItem
+                  key={page.path}
+                  onClick={handleCloseNavMenu}
+                  selected={activeTab === page.path}
+                  sx={{
+                    color: theme.palette.common.white,
+                  }}
+                >
+                  <Typography textAlign="center">{page.title}</Typography>
+                </MenuItem>
+              </Link>
             ))}
           </Box>
           <ToggleColorMode />
