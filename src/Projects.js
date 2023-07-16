@@ -87,7 +87,7 @@ export default function Projects() {
                   }}
                 >
                   <Typography variant="h6" align="left" nowrap="false">
-                    <strong>{project.title}</strong>
+                    {project.title}
                   </Typography>
                   <br />
                   <Typography variant="body1" gutterBottom nowrap="false">
