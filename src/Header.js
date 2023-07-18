@@ -146,25 +146,25 @@ function ResponsiveAppBar() {
             {pages.map((page) => (
               <MenuItem
                 key={page.path}
-                onClick={handleCloseNavMenu}
                 selected={activeTab === page.path}
                 role="menuitem"
+                to={page.path}
+                onClick={() => {
+                  setActiveTab(page.path);
+                  handleCloseNavMenu();
+                }}
+                aria-label={page.ariaLabel}
+                component={Link}
               >
-                <Link
-                  to={page.path}
-                  key={page.path}
-                  onClick={() => setActiveTab(page.path)}
-                  aria-label={page.ariaLabel}
+                <Typography
+                  textAlign="center"
+                  sx={{
+                    color: theme.palette.common.white,
+                  }}
                 >
-                  <Typography
-                    textAlign="center"
-                    sx={{
-                      color: theme.palette.common.white,
-                    }}
-                  >
-                    {page.title}
-                  </Typography>
-                </Link>
+                  {page.title}
+                </Typography>
+                {/* </Link> */}
               </MenuItem>
             ))}
           </Box>

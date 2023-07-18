@@ -49,6 +49,67 @@ a:hover {
 a:active {
   text-decoration: none;
 }
+.blinking-cursor {
+  font-weight: 100;
+  font-size: 30px;
+  color: #64B64F;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
+.dos {
+  color: "#64B64F";
+  font-family: "VT323";
+  white-space: "pre-line";
+}
+
+@keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: #64B64F;
+  }
+}
+
+@-moz-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: #64B64F;
+  }
+}
+
+@-webkit-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: #64B64F;
+  }
+}
+
+@-ms-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: #64B64F;
+  }
+}
+
+@-o-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: #64B64F;
+  }
+}
 
 @keyframes App-logo-spin {
   from {
