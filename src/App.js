@@ -36,7 +36,6 @@ function App() {
           lineHeight: 4,
           body1: {
             lineHeight: 2,
-            fontFamily: "VT323",
           },
         },
         palette: {

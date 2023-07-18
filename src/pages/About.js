@@ -35,11 +35,11 @@ function About() {
 
   const promptText2 = "tom_about.exe";
   const paragraph2Text =
-    "Tom is big a fan of new places and experiences. He really enjoys learning new things. This manifests itself often in fixing or building things. Websites, computers, cars, appliances, whatever. Passion for learning new things is what led him to a career in tech. He has a B.A. in Economics. He decided to make a career change and tech was the perfect match for his interests and passions. He thinks talking in third person is weird, but it makes sense for this section";
+    "Tom is big a fan of new places and experiences. He really enjoys learning new things. This manifests itself often in fixing or building things. Websites, computers, cars, appliances, whatever. Passion for learning new things is what led him to a career in tech. He has a B.A. in Economics. He decided to make a career change and tech was the perfect match for his interests and passions. He thinks talking in third person is weird, but it makes sense for this section.";
 
   const promptText3 = "tom_hobbies.exe";
   const paragraph3Text =
-    "September to January: watching Chicago Bears lose games. \n February to August: beliving Chicago Bears will win this year. \n Hope Springs Eternal :) \nAnything Hartford Whalers. \nVintage video games: Wayne Gretzky Hockey, Ken Griffy Jr. Baseball, No One Lives Forever, NFL Street, and more";
+    "September to January: watching Chicago Bears lose games. \n February to August: beliving Chicago Bears will win this year. \n Hope Springs Eternal :) \nAnything Hartford Whalers. \nVintage video games: Wayne Gretzky Hockey, Ken Griffy Jr. Baseball, No One Lives Forever, NFL Street, and more.";
 
   //To do add button to skip typing effect that fades in after one or two seconds so someone can simply see text
 
