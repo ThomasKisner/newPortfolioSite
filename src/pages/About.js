@@ -39,10 +39,10 @@ function About() {
 
   const promptText3 = "tom_hobbies.exe";
   const paragraph3Text =
-    "September to January: watching Chicago Bears lose games. \n February to August: beliving Chicago Bears will win this year. \n Hope Springs Eternal :) \nAnything Hartford Whalers. \nVintage video games: Wayne Gretzky Hockey, Ken Griffy Jr. Baseball, No One Lives Forever, NFL Street, and more.";
+    "September to January: watching Chicago Bears lose games. \n February to August: believing Chicago Bears will win this year. \n Hope Springs Eternal :) \nAnything Hartford Whalers. \nVintage video games: Wayne Gretzky Hockey, Ken Griffey Jr. Baseball, No One Lives Forever, NFL Street, and more.";
 
   //To do add button to skip typing effect that fades in after one or two seconds so someone can simply see text
-
+  //To do make more dynamic - consolidate useEffects - possible put logic in function and kick off single useEffect?
   useEffect(() => {
     //Makes cursor blink where prompt will be typed to give appearance of typing.
     const startPrompt1 = setTimeout(() => {

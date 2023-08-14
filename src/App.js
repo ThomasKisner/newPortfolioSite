@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { createContext, useState, useMemo, lazy, Suspense } from "react";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { Routes, Route } from "react-router-dom";
 import Container from "@mui/material/Container";
@@ -7,20 +7,20 @@ import "./App.css";
 import Header from "./Header";
 
 import useMediaQuery from "@mui/material/useMediaQuery";
-import Homepage from "./pages/Homepage";
-import About from "./pages/About";
-import Patience from "./pages/Patience";
-
-export const ColorModeContext = React.createContext({
+const Homepage = lazy(() => import("./pages/Homepage"));
+const About = lazy(() => import("./pages/About"));
+const Patience = lazy(() => import("./pages/Patience"));
+const Test = lazy(() => import("./pages/Google"));
+export const ColorModeContext = createContext({
   toggleColorMode: () => {},
 });
 
 function App() {
-  const [mode, setMode] = React.useState(
+  const [mode, setMode] = useState(
     useMediaQuery("(prefers-color-scheme: dark)") ? "dark" : "light"
   ); //Sets users light/dark mode preference as colorMode
 
-  const colorMode = React.useMemo(
+  const colorMode = useMemo(
     () => ({
       toggleColorMode: () => {
         setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
@@ -29,7 +29,7 @@ function App() {
     []
   );
 
-  const theme = React.useMemo(
+  const theme = useMemo(
     () =>
       createTheme({
         typography: {
@@ -54,23 +54,17 @@ function App() {
       <ThemeProvider theme={theme}>
         <div className="App">
           <CssBaseline />
-          <Container
-            maxWidth={false}
-            disableGutters
-            //inspiration project: https://reactjsexample.com/a-sleek-and-responsive-personal-portfolio-template-built-using-react/
-            //inspiration deployed project: https://reactfolio.tharindu.dev/about
-            //TO DO make sides slightly darker
-            //TO DO add resume pdf like here: https://brittanychiang.com/
-            // https://www.geeksforgeeks.org/how-to-download-pdf-file-in-reactjs/#
-          >
+          <Container maxWidth={false} disableGutters>
             <Container disableGutters={isXs}>
               <Header />
-              <Routes>
-                <Route path="/" element={<Homepage />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Patience />} />
-                <Route path="/projects" element={<Patience />} />
-              </Routes>
+              <Suspense callback={<div></div>}>
+                <Routes>
+                  <Route path="/" element={<Homepage />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/playground" element={<Test />} />
+                  <Route path="/projects" element={<Patience />} />
+                </Routes>
+              </Suspense>
 
               {/* <Work /> */}
             </Container>
@@ -82,3 +76,10 @@ function App() {
 }
 
 export default App;
+
+//inspiration project: https://reactjsexample.com/a-sleek-and-responsive-personal-portfolio-template-built-using-react/
+//inspiration deployed project: https://reactfolio.tharindu.dev/about
+//TO DO make sides slightly darker
+//TO DO add resume pdf like here: https://brittanychiang.com/
+//TO DO - extract Box to HOC for pages so styling is shared and reused.
+// https://www.geeksforgeeks.org/how-to-download-pdf-file-in-reactjs/#

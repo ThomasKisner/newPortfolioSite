@@ -22,7 +22,11 @@ const pages = [
     path: "projects",
     ariaLabel: "Projects navigation button",
   },
-  { title: "Contact", path: "contact", ariaLabel: "Contact navigation button" },
+  {
+    title: "Playground",
+    path: "playground",
+    ariaLabel: "Playground navigation button",
+  },
 ];
 
 function getActiveTab() {
