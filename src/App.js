@@ -55,7 +55,7 @@ function App() {
           <Container maxWidth={false} disableGutters>
             <Container disableGutters={isXs}>
               <Header />
-              <Suspense callback={<div></div>}>
+              <Suspense fallback={<div></div>}>
                 <Routes>
                   <Route path="/" element={<Homepage />} />
                   <Route path="/about" element={<About />} />
