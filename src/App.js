@@ -45,8 +45,6 @@ function App() {
     [mode]
   );
 
-  console.log(theme.typography);
-
   const isXs = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
@@ -82,4 +80,5 @@ export default App;
 //TO DO make sides slightly darker
 //TO DO add resume pdf like here: https://brittanychiang.com/
 //TO DO - extract Box to HOC for pages so styling is shared and reused.
+//TO DO - add transition to lazy loaded components.
 // https://www.geeksforgeeks.org/how-to-download-pdf-file-in-reactjs/#

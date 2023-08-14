@@ -3,6 +3,7 @@ import { GoogleLogin } from "@react-oauth/google";
 import { Box, Grid, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import Resume from "./Resume";
+import useFetchIP from "../useFetchIP.js";
 
 const Item = styled(Box)(({ theme }) => ({
   padding: theme.spacing(1),
@@ -11,6 +12,8 @@ const Item = styled(Box)(({ theme }) => ({
 }));
 
 const Google = () => {
+  const ipAddr = useFetchIP();
+
   const responseMessage = (response) => {
     console.log(response);
   };
@@ -37,8 +40,15 @@ const Google = () => {
           <Typography variant="body1" gutterBottom>
             Learning how to trigger a pdf download.
           </Typography>
-
           <Resume />
+          <br />
+          <Typography variant="body1" gutterBottom>
+            Custom hook practice - gets userIP address
+          </Typography>
+
+          <Typography variant="body1" gutterBottom>
+            IP: {ipAddr ? ipAddr : "...Loading"}
+          </Typography>
         </Item>
       </Grid>
     </Box>
