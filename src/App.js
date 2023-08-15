@@ -1,6 +1,7 @@
 import React, { createContext, useState, useMemo, lazy, Suspense } from "react";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { Routes, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import Container from "@mui/material/Container";
 import CssBaseline from "@mui/material/CssBaseline";
 import "./App.css";
@@ -55,13 +56,14 @@ function App() {
           <Container maxWidth={false} disableGutters>
             <Container disableGutters={isXs}>
               <Header />
-              <Routes>
-                <Route path="/" element={<Homepage />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/playground" element={<Test />} />
-                <Route path="/projects" element={<Patience />} />
-              </Routes>
-
+              <BrowserRouter>
+                <Routes>
+                  <Route path="/" element={<Homepage />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/playground" element={<Test />} />
+                  <Route path="/projects" element={<Patience />} />
+                </Routes>
+              </BrowserRouter>
               {/* <Work /> */}
             </Container>
           </Container>
