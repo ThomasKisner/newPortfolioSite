@@ -56,10 +56,10 @@ function App() {
             <Container disableGutters={isXs}>
               <Header />
               <Routes>
-                <Route path="/" element={<Homepage />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/playground" element={<Test />} />
                 <Route path="/projects" element={<Patience />} />
+                <Route path="/" element={<Homepage />} />
               </Routes>
 
               {/* <Work /> */}
