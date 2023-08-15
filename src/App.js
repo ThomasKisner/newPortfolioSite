@@ -7,10 +7,10 @@ import "./App.css";
 import Header from "./Header";
 
 import useMediaQuery from "@mui/material/useMediaQuery";
-const Homepage = lazy(() => import("./pages/Homepage"));
-const About = lazy(() => import("./pages/About"));
-const Patience = lazy(() => import("./pages/Patience"));
-const Test = lazy(() => import("./pages/Google"));
+import Homepage from "./pages/Homepage";
+import About from "./pages/About";
+import Patience from "./pages/Patience";
+import Test from "./pages/Google";
 export const ColorModeContext = createContext({
   toggleColorMode: () => {},
 });

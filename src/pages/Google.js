@@ -35,7 +35,10 @@ const Google = () => {
             by video length & more)
           </Typography>
           <h2>Google Login</h2>
-          <GoogleLogin onSuccess={responseMessage} onError={errorMessage} />
+          <div style={{ width: "200px", height: "44px" }}>
+            <GoogleLogin onSuccess={responseMessage} onError={errorMessage} />
+          </div>
+
           <br />
           <Typography variant="body1" gutterBottom>
             Learning how to trigger a pdf download.
@@ -43,7 +46,7 @@ const Google = () => {
           <Resume />
           <br />
           <Typography variant="body1" gutterBottom>
-            Custom hook practice - gets userIP address
+            Custom hook practice - gets userIP address - issue in firefox
           </Typography>
 
           <Typography variant="body1" gutterBottom>
