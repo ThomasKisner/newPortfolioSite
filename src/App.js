@@ -55,14 +55,12 @@ function App() {
           <Container maxWidth={false} disableGutters>
             <Container disableGutters={isXs}>
               <Header />
-              <Suspense fallback={<div></div>}>
-                <Routes>
-                  <Route path="/" element={<Homepage />} />
-                  <Route path="/about" element={<About />} />
-                  <Route path="/playground" element={<Test />} />
-                  <Route path="/projects" element={<Patience />} />
-                </Routes>
-              </Suspense>
+              <Routes>
+                <Route path="/" element={<Homepage />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/playground" element={<Test />} />
+                <Route path="/projects" element={<Patience />} />
+              </Routes>
 
               {/* <Work /> */}
             </Container>
